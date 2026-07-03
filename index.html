@@ -62,15 +62,22 @@
             margin-bottom: 1.5rem;
         }
         
-        /* Responsive Framework Blocks */
+        /* Fixed Stackable Mobile Layout Blocks */
         .grid-terminal {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
             max-width: 72rem;
             margin: 0 auto 2rem auto;
             padding: 0 1rem;
         }
+        @media (min-width: 1024px) {
+            .grid-terminal {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+        
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -92,8 +99,6 @@
 
         @media (max-width: 768px) {
             .hero-title { font-size: 2.25rem; }
-            .grid-3 { grid-template-columns: 1fr !important; }
-            .grid-terminal { grid-template-columns: 1fr !important; }
         }
 
         /* Buttons & Badges styling */
@@ -206,16 +211,24 @@
             </div>
         </div>
 
-        <!-- TradingView Chart Widget Card Container -->
-        <div class="card" style="padding: 1rem; min-height: 220px; background-color: #000000 !important;">
-            <div id="tradingview_market" style="height: 100%;"></div>
+        <!-- Stable Mobile-First TradingView Chart Widget Card Container -->
+        <div class="card" style="padding: 1rem; min-height: 300px; background-color: #0c0a09 !important;">
+            <div id="tradingview_market" style="height: 300px; width: 100%;"></div>
             <script type="text/javascript" src="https://tradingview.com"></script>
             <script type="text/javascript">
             new TradingView.MediumWidget({
                 "symbols": [["Bitcoin", "BINANCE:BTCUSDT|1M"], ["Ethereum", "BINANCE:ETHUSDT|1M"], ["Tether", "BINANCE:USDTUSDC|1M"]],
-                "chartOnly": false, "width": "100%", "height": 220, "locale": "en", "colorTheme": "dark",
-                "gridLineColor": "rgba(42, 46, 57, 0)", "trendLineColor": "#e5b80b", "fontColor": "#a8a29e",
-                "underLineColor": "rgba(229, 184, 11, 0.05)", "isTransparent": true, "container_id": "tradingview_market"
+                "chartOnly": false, 
+                "width": "100%", 
+                "height": "100%", 
+                "locale": "en", 
+                "colorTheme": "dark",
+                "gridLineColor": "rgba(42, 46, 57, 0)", 
+                "trendLineColor": "#e5b80b", 
+                "fontColor": "#a8a29e",
+                "underLineColor": "rgba(229, 184, 11, 0.05)", 
+                "isTransparent": true, 
+                "container_id": "tradingview_market"
             });
             </script>
         </div>
@@ -228,4 +241,3 @@
         <div class="card">
             <div>
                 <h3 style="font-size: 0.85rem; font-weight: 700; color: #a8a29e; text-transform: uppercase; margin: 0;">Bronze Plan</h3>
-                <p style="font-size: 2.25rem; font-weight: 900; color: #ffd700; margin: 1rem 0;">2.5% <span style="font-size: 0.75rem; color: #78716c; font-weight: normal; text-transform: uppercase;">Daily</span></p>
