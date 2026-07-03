@@ -4,33 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Need | Elite Crypto Investment Platform</title>
-    <!-- Modern Layout Engine -->
-    <script src="https://tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            50: '#fffdf0',
-                            100: '#fef9cb',
-                            200: '#fdf293',
-                            300: '#fbe550',
-                            400: '#f9d41b',
-                            500: '#e5b80b',
-                            600: '#c59307',
-                            700: '#9d6d07',
-                            800: '#7e530b',
-                            900: '#68430f',
-                            950: '#3d2305',
-                        }
-                    }
-                }
-            }
+    
+    <!-- Hardcoded Core Styling Engine to prevent it from going Black & White -->
+    <style>
+        /* Base Palette Layouts */
+        body {
+            background-color: #000000 !important;
+            color: #f1f5f9 !important;
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            letter-spacing: -0.025em;
         }
-    </script>
+        
+        /* Premium Luxury Gold Themes */
+        .text-gold {
+            color: #d4af37 !important;
+            background: linear-gradient(to right, #ffd700, #c59307, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #ffd700 0%, #c59307 50%, #9d6d07 100%) !important;
+            color: #000000 !important;
+        }
+        .border-gold {
+            border: 1px solid rgba(212, 175, 55, 0.25) !important;
+        }
+        .border-gold-heavy {
+            border: 2px solid #d4af37 !important;
+        }
+
+        /* Structured Layout Components */
+        nav {
+            background-color: #0c0a09 !important;
+            border-b: 1px solid rgba(212, 175, 55, 0.2) !important;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header {
+            text-align: center;
+            padding: 6rem 1rem;
+            max-width: 56rem;
+            margin: 0 auto;
+            position: relative;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.25rem; }
+            .grid-3 { grid-template-columns: 1fr !important; }
+            .grid-terminal { grid-template-columns: 1fr !important; }
+        }
+
+        /* Interactive Grid Matrices */
+        .grid-terminal {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            max-width: 72rem;
+            margin: 0 auto 2rem auto;
+            padding: 0 1rem;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            max-width: 72rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background-color: #0c0a09 !important;
+            padding: 2rem;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Buttons & Badges styling */
+        .btn-luxury {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.85rem 1.5rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        .btn-secondary {
+            background-color: #1c1917 !important;
+            color: #ffd700 !important;
+        }
+        .badge {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: #ffd700;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: inline-block;
+        }
+
+        /* Dynamic Counter Fields */
+        .counter-text {
+            font-family: monospace;
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: #ffd700;
+            margin-bottom: 1.5rem;
+        }
+        .address-box {
+            background-color: #000000;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #ffd700;
+            word-break: break-all;
+            margin-top: 0.5rem;
+            border: 1px solid #1c1917;
+        }
+    </style>
 </head>
-<body class="bg-black text-slate-100 font-sans tracking-tight selection:bg-gold-500 selection:text-black">
+<body>
 
     <!-- Premium Luxury Header / Navigation -->
-    <nav class="p-5 bg-stone-950/90 backdrop-blur-xl border-b border-gold-500/20 sticky top-0 z-50 px-6 md:px-12 flex justify-between items-center shadow-2xl shadow-gold-950/20">
+    <nav class="border-gold">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 2.75rem; height: 2.75rem; background: linear-gradient(135deg, #ffd700, #c59307); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(212,175,55,0.3);">
+                <span style="color: #000000; font-weight: 900; font-size: 1.25rem;">DN</span>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <span style="font-size: 1.25rem; font-weight: 900; tracking: 0.1em; text-transform: uppercase; color: #ffd700;">Daily Need</span>
+                <span style="font-size: 0.6rem; font-weight: 700; color: #878685; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.1rem;">Institutional Capital</span>
+            </div>
+        </div>
+        <div>
+            <a href="#deposit" class="btn-luxury bg-gold-gradient">Invest Now</a>
+        </div>
+    </nav>
+
+    <!-- Main Dynamic Hero Section -->
+    <header>
+        <span class="badge">Verified Asset Management Vaults</span>
+        <h1 class="hero-title">
+            Algorithmic Crypto Yields <br>
+            <span class="text-gold">Compounded Every Second</span>
+        </h1>
+        <p style="color: #a8a29e; font-size: 1.1rem; line-height: 1.6; max-width: 42rem; margin: 0 auto 2.5rem auto;">
+            Welcome to <strong>Daily Need</strong>. Select an active liquidity allocation tier, secure your contract using our encrypted remittance endpoints below, and scale your on-chain assets automatically.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="#plans" class="btn-luxury bg-gold-gradient" style="padding: 1rem 2rem;">View Asset Plans</a>
+            <a href="#terminal" class="btn-luxury btn-secondary" style="padding: 1rem 2rem;">Live Dashboard</a>
+        </div>
+    </header>
+
+    <!-- Real-Time Metrics & Live Hashing Terminal -->
+    <section id="terminal" class="grid-terminal">
+        <!-- Live Growing Asset Portfolio Panel -->
+        <div class="card border-gold" style="position: relative;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: #ffd700; margin: 0;">Live Platform Node</h3>
+                <span style="width: 0.5rem; height: 0.5rem; background-color: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></span>
+            </div>
+            <p style="font-size: 0.65rem; color: #78716c; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.25rem 0;">Simulated Live Portfolio Balance</p>
+            <div class="counter-text">$<span id="portfolioCounter">300,000.00</span></div>
+            
+            <div style="border-t: 1px solid #1c1917; padding-top: 1rem; font-size: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span style="color: #a8a29e;">Infrastructure:</span>
+                    <span style="color: #ffd700; font-weight: 900; text-transform: uppercase; font-size: 0.65rem;">Online & Compounding</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="color: #a8a29e;">Total Pool Output:</span>
+                    <span style="color: #e7e5e4; font-weight: bold;" id="payoutCounter">6.42510 BTC</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TradingView Chart Widget Card Container -->
+        <div class="card border-gold" style="padding: 1rem; min-height: 220px; background-color: #000000 !important;">
+            <div id="tradingview_market" style="height: 100%;"></div>
+            <script type="text/javascript" src="https://tradingview.com"></script>
+            <script type="text/javascript">
+            new TradingView.MediumWidget({
+                "symbols": [["Bitcoin", "BINANCE:BTCUSDT|1M"], ["Ethereum", "BINANCE:ETHUSDT|1M"], ["Tether", "BINANCE:USDTUSDC|1M"]],
+                "chartOnly": false, "width": "100%", "height": 220, "locale": "en", "colorTheme": "dark",
+                "gridLineColor": "rgba(42, 46, 57, 0)", "trendLineColor": "#e5b80b", "fontColor": "#a8a29e",
+                "underLineColor": "rgba(229, 184, 11, 0.05)", "isTransparent": true, "container_id": "tradingview_market"
+            });
+            </script>
+        </div>
+    </section>
+
+    <!-- Investment Account Strategy Tiers -->
+    <section id="plans" class="grid-3" style="margin-bottom: 4rem; margin-top: 2rem;">
+        <!-- Bronze Plan -->
+        <div class="card border-gold">
+            <div>
+                <h3 style="font-size: 0.85rem; font-weight: 700; color: #a8a29e; text-transform: uppercase; margin: 0;">Bronze Plan</h3>
+                <p style="font-size: 2.25rem; font-weight: 900; color: #ffd700; margin: 1rem 0;">2.5% <span style="font-size: 0.75rem; color: #78716c; font-weight: normal; text-transform: uppercase;">Daily</span></p>
