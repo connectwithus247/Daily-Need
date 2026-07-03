@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Need | Elite Crypto Investment Platform</title>
     
-    <!-- Hardcoded Core Styling Engine to prevent it from going Black & White -->
+    <!-- Permanent Embedded Core Layout Engine -->
     <style>
         /* Base Palette Layouts */
         body {
@@ -35,7 +35,7 @@
             border: 2px solid #d4af37 !important;
         }
 
-        /* Structured Layout Components */
+        /* Fixed Navigation Layout Rule */
         nav {
             background-color: #0c0a09 !important;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
@@ -49,7 +49,7 @@
         }
         header {
             text-align: center;
-            padding: 6rem 1rem;
+            padding: 4rem 1rem;
             max-width: 56rem;
             margin: 0 auto;
             position: relative;
@@ -61,13 +61,8 @@
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
         }
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.25rem; }
-            .grid-3 { grid-template-columns: 1fr !important; }
-            .grid-terminal { grid-template-columns: 1fr !important; }
-        }
-
-        /* Interactive Grid Matrices */
+        
+        /* Responsive Framework Blocks */
         .grid-terminal {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -76,8 +71,6 @@
             margin: 0 auto 2rem auto;
             padding: 0 1rem;
         }
-        
-        /* Upgraded Flexible Layout Grid for 5 Plans */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -94,6 +87,13 @@
             flex-direction: column;
             justify-content: space-between;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.25rem; }
+            .grid-3 { grid-template-columns: 1fr !important; }
+            .grid-terminal { grid-template-columns: 1fr !important; }
         }
 
         /* Buttons & Badges styling */
@@ -152,7 +152,7 @@
 <body>
 
     <!-- Premium Luxury Header / Navigation -->
-    <nav class="border-gold">
+    <nav>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
             <div style="width: 2.75rem; height: 2.75rem; background: linear-gradient(135deg, #ffd700, #c59307); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(212,175,55,0.3);">
                 <span style="color: #000000; font-weight: 900; font-size: 1.25rem;">DN</span>
@@ -186,7 +186,7 @@
     <!-- Real-Time Metrics & Live Hashing Terminal -->
     <section id="terminal" class="grid-terminal">
         <!-- Live Growing Asset Portfolio Panel -->
-        <div class="card border-gold" style="position: relative;">
+        <div class="card">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h3 style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: #ffd700; margin: 0;">Live Platform Node</h3>
                 <span style="width: 0.5rem; height: 0.5rem; background-color: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></span>
@@ -207,7 +207,7 @@
         </div>
 
         <!-- TradingView Chart Widget Card Container -->
-        <div class="card border-gold" style="padding: 1rem; min-height: 220px; background-color: #000000 !important;">
+        <div class="card" style="padding: 1rem; min-height: 220px; background-color: #000000 !important;">
             <div id="tradingview_market" style="height: 100%;"></div>
             <script type="text/javascript" src="https://tradingview.com"></script>
             <script type="text/javascript">
@@ -221,10 +221,11 @@
         </div>
     </section>
 
-    <!-- Investment Account Strategy Tiers (5 Upgraded Plans) -->
-    <section id="plans" class="grid-3" style="margin-bottom: 4rem; margin-top: 2rem;">
+    <!-- Investment Account Strategy Tiers -->
+    <section id="plans" class="grid-3" style="margin-bottom: 4rem; margin-top: 4rem;">
         
         <!-- Bronze Plan -->
-        <div class="card border-gold">
+        <div class="card">
             <div>
                 <h3 style="font-size: 0.85rem; font-weight: 700; color: #a8a29e; text-transform: uppercase; margin: 0;">Bronze Plan</h3>
+                <p style="font-size: 2.25rem; font-weight: 900; color: #ffd700; margin: 1rem 0;">2.5% <span style="font-size: 0.75rem; color: #78716c; font-weight: normal; text-transform: uppercase;">Daily</span></p>
