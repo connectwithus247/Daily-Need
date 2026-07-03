@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Need | Elite Crypto Investment Platform</title>
     
+    <!-- Complete Hardcoded Self-Contained Layout System -->
     <style>
         /* Base Palette Layouts */
         body {
@@ -14,6 +15,7 @@
             margin: 0;
             padding: 0;
             letter-spacing: -0.025em;
+            scroll-behavior: smooth;
         }
         
         /* Premium Luxury Gold Themes */
@@ -161,7 +163,8 @@
             </div>
         </div>
         <div>
-            <a href="#deposit" class="btn-luxury bg-gold-gradient">Invest Now</a>
+            <!-- Repaired Dynamic Scroll Anchor Link -->
+            <button onclick="scrollToDeposit()" class="btn-luxury bg-gold-gradient">Invest Now</button>
         </div>
     </nav>
 
@@ -176,8 +179,8 @@
             Welcome to <strong>Daily Need</strong>. Select an active liquidity allocation tier, secure your contract using our encrypted remittance endpoints below, and scale your on-chain assets automatically.
         </p>
         <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="#plans" class="btn-luxury bg-gold-gradient" style="padding: 1rem 2rem;">View Asset Plans</a>
-            <a href="#terminal" class="btn-luxury btn-secondary" style="padding: 1rem 2rem;">Live Dashboard</a>
+            <button onclick="scrollToPlans()" class="btn-luxury bg-gold-gradient" style="padding: 1rem 2rem;">View Asset Plans</button>
+            <button onclick="scrollToTerminal()" class="btn-luxury btn-secondary" style="padding: 1rem 2rem;">Live Dashboard</button>
         </div>
     </header>
 
@@ -206,7 +209,7 @@
     </section>
 
     <!-- Investment Account Strategy Tiers -->
-    <section id="plans" class="grid-3" style="margin-bottom: 4rem; margin-top: 4rem;">
+    <section id="plans" class="grid-3" style="margin-bottom: 4rem; margin-top: 4rem; scroll-margin-top: 2rem;">
         
         <!-- Bronze Plan -->
         <div class="card">
@@ -219,13 +222,10 @@
                     <div>✔ Standard Pipeline Priority</div>
                 </div>
             </div>
-            <a href="#deposit" onclick="selectPlan('Bronze Tier Strategy')" class="btn-luxury btn-secondary" style="margin-top: 2rem;">Select Bronze</a>
+            <button onclick="selectPlan('Bronze Tier Strategy')" class="btn-luxury btn-secondary" style="margin-top: 2rem; width: 100%;">Select Bronze</button>
         </div>
         
         <!-- Silver Plan -->
         <div class="card">
             <div>
                 <h3 style="font-size: 0.85rem; font-weight: 700; color: #a8a29e; text-transform: uppercase; margin: 0;">Silver Premium</h3>
-                <p style="font-size: 2.25rem; font-weight: 900; color: #ffd700; margin: 1rem 0;">5.0% <span style="font-size: 0.75rem; color: #78716c; font-weight: normal; text-transform: uppercase;">Daily</span></p>
-                <div style="border-top: 1px solid #1c1917; padding-top: 1rem; font-size: 0.75rem; color: #a8a29e; line-height: 2;">
-                    <div>✔ Min Allocation: $1,000</div>
