@@ -38,7 +38,7 @@
         /* Structured Layout Components */
         nav {
             background-color: #0c0a09 !important;
-            border-b: 1px solid rgba(212, 175, 55, 0.2) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
             padding: 1.25rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -76,9 +76,11 @@
             margin: 0 auto 2rem auto;
             padding: 0 1rem;
         }
+        
+        /* Upgraded Flexible Layout Grid for 5 Plans */
         .grid-3 {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             max-width: 72rem;
             margin: 0 auto;
@@ -192,7 +194,7 @@
             <p style="font-size: 0.65rem; color: #78716c; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.25rem 0;">Simulated Live Portfolio Balance</p>
             <div class="counter-text">$<span id="portfolioCounter">300,000.00</span></div>
             
-            <div style="border-t: 1px solid #1c1917; padding-top: 1rem; font-size: 0.75rem;">
+            <div style="border-top: 1px solid #1c1917; padding-top: 1rem; font-size: 0.75rem;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                     <span style="color: #a8a29e;">Infrastructure:</span>
                     <span style="color: #ffd700; font-weight: 900; text-transform: uppercase; font-size: 0.65rem;">Online & Compounding</span>
@@ -219,10 +221,10 @@
         </div>
     </section>
 
-    <!-- Investment Account Strategy Tiers -->
+    <!-- Investment Account Strategy Tiers (5 Upgraded Plans) -->
     <section id="plans" class="grid-3" style="margin-bottom: 4rem; margin-top: 2rem;">
+        
         <!-- Bronze Plan -->
         <div class="card border-gold">
             <div>
                 <h3 style="font-size: 0.85rem; font-weight: 700; color: #a8a29e; text-transform: uppercase; margin: 0;">Bronze Plan</h3>
-                <p style="font-size: 2.25rem; font-weight: 900; color: #ffd700; margin: 1rem 0;">2.5% <span style="font-size: 0.75rem; color: #78716c; font-weight: normal; text-transform: uppercase;">Daily</span></p>
