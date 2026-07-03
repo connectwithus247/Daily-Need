@@ -15,15 +15,11 @@
             margin: 0;
             padding: 0;
             letter-spacing: -0.025em;
-            scroll-behavior: smooth;
         }
         
         /* Premium Luxury Gold Themes */
         .text-gold {
-            color: #d4af37 !important;
-            background: linear-gradient(to right, #ffd700, #c59307, #ffd700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffd700 !important;
         }
         .bg-gold-gradient {
             background: linear-gradient(135deg, #ffd700 0%, #c59307 50%, #9d6d07 100%) !important;
@@ -63,7 +59,7 @@
             margin-bottom: 1.5rem;
         }
         
-        /* Stackable Mobile Blocks - Clean Flow Without the Broken Widget Box */
+        /* Stackable Mobile Blocks */
         .grid-terminal {
             display: flex;
             flex-direction: column;
@@ -154,7 +150,7 @@
     <!-- Premium Luxury Header / Navigation -->
     <nav>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <div style="width: 2.75rem; height: 2.75rem; background: linear-gradient(135deg, #ffd700, #c59307); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(212,175,55,0.3);">
+            <div style="width: 2.75rem; height: 2.75rem; background: linear-gradient(135deg, #ffd700, #c59307); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center;">
                 <span style="color: #000000; font-weight: 900; font-size: 1.25rem;">DN</span>
             </div>
             <div style="display: flex; flex-direction: column;">
@@ -163,8 +159,8 @@
             </div>
         </div>
         <div>
-            <!-- Smooth JavaScript Scroll Anchor Action -->
-            <button onclick="scrollToDeposit()" class="btn-luxury bg-gold-gradient">Invest Now</button>
+            <!-- Direct Anchor Link Strategy -->
+            <a href="#deposit" class="btn-luxury bg-gold-gradient">Invest Now</a>
         </div>
     </nav>
 
@@ -179,8 +175,8 @@
             Welcome to <strong>Daily Need</strong>. Select an active liquidity allocation tier, secure your contract using our encrypted remittance endpoints below, and scale your on-chain assets automatically.
         </p>
         <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <button onclick="scrollToPlans()" class="btn-luxury bg-gold-gradient" style="padding: 1rem 2rem;">View Asset Plans</button>
-            <button onclick="scrollToTerminal()" class="btn-luxury btn-secondary" style="padding: 1rem 2rem;">Live Dashboard</button>
+            <a href="#plans" class="btn-luxury bg-gold-gradient" style="padding: 1rem 2rem;">View Asset Plans</a>
+            <a href="#terminal" class="btn-luxury btn-secondary" style="padding: 1rem 2rem;">Live Dashboard</a>
         </div>
     </header>
 
@@ -222,10 +218,17 @@
                     <div>✔ Standard Pipeline Priority</div>
                 </div>
             </div>
-            <button onclick="selectPlan('Bronze Tier Strategy')" class="btn-luxury btn-secondary" style="margin-top: 2rem; width: 100%;">Select Bronze</button>
+            <a href="#deposit" onclick="selectPlan('Bronze Tier Strategy')" class="btn-luxury btn-secondary" style="margin-top: 2rem;">Select Bronze</a>
         </div>
         
         <!-- Silver Plan -->
         <div class="card">
             <div>
                 <h3 style="font-size: 0.85rem; font-weight: 700; color: #a8a29e; text-transform: uppercase; margin: 0;">Silver Premium</h3>
+                <p style="font-size: 2.25rem; font-weight: 900; color: #ffd700; margin: 1rem 0;">5.0% <span style="font-size: 0.75rem; color: #78716c; font-weight: normal; text-transform: uppercase;">Daily</span></p>
+                <div style="border-top: 1px solid #1c1917; padding-top: 1rem; font-size: 0.75rem; color: #a8a29e; line-height: 2;">
+                    <div>✔ Min Allocation: $1,000</div>
+                    <div>✔ Max Allocation: $4,999</div>
+                    <div>✔ High Network Bandwidth Pool</div>
+                </div>
+            </div>
