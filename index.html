@@ -1,234 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Need | Elite Crypto Investment Platform</title>
-    
-    <!-- Permanent Embedded Core Layout Engine -->
-    <style>
-        /* Base Palette Layouts */
-        body {
-            background-color: #000000 !important;
-            color: #f1f5f9 !important;
-            font-family: system-ui, -apple-system, sans-serif;
-            margin: 0;
-            padding: 0;
-            letter-spacing: -0.025em;
-        }
-        
-        /* Premium Luxury Gold Themes */
-        .text-gold {
-            color: #ffd700 !important;
-        }
-        .bg-gold-gradient {
-            background: linear-gradient(135deg, #ffd700 0%, #c59307 50%, #9d6d07 100%) !important;
-            color: #000000 !important;
-        }
-        .border-gold {
-            border: 1px solid rgba(212, 175, 55, 0.25) !important;
-        }
-        .border-gold-heavy {
-            border: 2px solid #d4af37 !important;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Need | Elite Crypto Platform</title>
 
-        /* Fixed Navigation Layout Rule */
-        nav {
-            background-color: #0c0a09 !important;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
-            padding: 1.25rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        header {
-            text-align: center;
-            padding: 4rem 1rem;
-            max-width: 56rem;
-            margin: 0 auto;
-            position: relative;
-        }
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Stackable Mobile Blocks */
-        .grid-terminal {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            max-width: 42rem;
-            margin: 0 auto 2rem auto;
-            padding: 0 1rem;
-        }
-        
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 72rem;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        .card {
-            background-color: #0c0a09 !important;
-            padding: 2rem;
-            border-radius: 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-        }
+<style>
+body {
+    margin:0;
+    font-family: system-ui;
+    background:#000;
+    color:#f1f5f9;
+}
 
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.25rem; }
-        }
+/* GOLD THEME */
+.text-gold { color:#ffd700; }
 
-        /* Buttons & Badges styling */
-        .btn-luxury {
-            display: inline-block;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            padding: 0.85rem 1.5rem;
-            border-radius: 0.75rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid rgba(255,215,0,0.3);
-        }
-        .btn-secondary {
-            background-color: #1c1917 !important;
-            color: #ffd700 !important;
-        }
-        .badge {
-            background-color: rgba(212, 175, 55, 0.1);
-            color: #ffd700;
-            font-size: 0.65rem;
-            font-weight: 900;
-            padding: 0.5rem 1.25rem;
-            border-radius: 9999px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            display: inline-block;
-        }
+.bg-gold {
+    background:linear-gradient(135deg,#ffd700,#c59307);
+    color:#000;
+}
 
-        /* Dynamic Counter Fields */
-        .counter-text {
-            font-family: monospace;
-            font-size: 2.25rem;
-            font-weight: 900;
-            color: #ffd700;
-            margin-bottom: 1.5rem;
-        }
-        .address-box {
-            background-color: #000000;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            font-family: monospace;
-            font-size: 0.85rem;
-            color: #ffd700;
-            word-break: break-all;
-            margin-top: 0.5rem;
-            border: 1px solid #1c1917;
-        }
-    </style>
+nav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    background:#0c0a09;
+    border-bottom:1px solid #222;
+    position:sticky;
+    top:0;
+}
+
+header {
+    text-align:center;
+    padding:50px 20px;
+}
+
+h1 { font-size:40px; }
+
+.btn {
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    border:none;
+}
+
+.btn-gold {
+    background:linear-gradient(135deg,#ffd700,#c59307);
+    color:#000;
+}
+
+.btn-dark {
+    background:#111;
+    color:#ffd700;
+    border:1px solid #333;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card {
+    background:#0c0a09;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid #222;
+}
+
+#walletBox {
+    margin-top:15px;
+    color:#ffd700;
+    font-size:12px;
+    word-break:break-all;
+}
+
+/* WALLET PANEL */
+.wallet-panel {
+    display:none;
+    margin:20px auto;
+    max-width:600px;
+    background:#0c0a09;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #333;
+}
+
+.wallet-item {
+    margin-bottom:15px;
+}
+
+.copy-btn {
+    margin-top:5px;
+    padding:6px 10px;
+    font-size:11px;
+    background:#111;
+    border:1px solid #333;
+    color:#ffd700;
+    cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Premium Luxury Header / Navigation -->
-    <nav>
-        <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <div style="width: 2.75rem; height: 2.75rem; background: linear-gradient(135deg, #ffd700, #c59307); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center;">
-                <span style="color: #000000; font-weight: 900; font-size: 1.25rem;">DN</span>
-            </div>
-            <div style="display: flex; flex-direction: column;">
-                <span style="font-size: 1.25rem; font-weight: 900; tracking: 0.1em; text-transform: uppercase; color: #ffd700;">Daily Need</span>
-                <span style="font-size: 0.6rem; font-weight: 700; color: #878685; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.1rem;">Institutional Capital</span>
-            </div>
-        </div>
-        <div>
-            <!-- Direct Anchor Link Strategy -->
-            <a href="#deposit" class="btn-luxury bg-gold-gradient">Invest Now</a>
-        </div>
-    </nav>
+<nav>
+    <div class="text-gold"><b>Daily Need</b></div>
+    <button class="btn btn-gold" onclick="connectWallet()">Connect Wallet</button>
+</nav>
 
-    <!-- Main Dynamic Hero Section -->
-    <header>
-        <span class="badge">Verified Asset Management Vaults</span>
-        <h1 class="hero-title">
-            Algorithmic Crypto Yields <br>
-            <span class="text-gold">Compounded Every Second</span>
-        </h1>
-        <p style="color: #a8a29e; font-size: 1.1rem; line-height: 1.6; max-width: 42rem; margin: 0 auto 2.5rem auto;">
-            Welcome to <strong>Daily Need</strong>. Select an active liquidity allocation tier, secure your contract using our encrypted remittance endpoints below, and scale your on-chain assets automatically.
-        </p>
-        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="#plans" class="btn-luxury bg-gold-gradient" style="padding: 1rem 2rem;">View Asset Plans</a>
-            <a href="#terminal" class="btn-luxury btn-secondary" style="padding: 1rem 2rem;">Live Dashboard</a>
-        </div>
-    </header>
+<header>
+    <h1>Crypto Investment <span class="text-gold">Platform</span></h1>
 
-    <!-- Real-Time Metrics & Live Hashing Terminal -->
-    <section id="terminal" class="grid-terminal">
-        <!-- Live Growing Asset Portfolio Panel -->
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: #ffd700; margin: 0;">Live Platform Node</h3>
-                <span style="width: 0.5rem; height: 0.5rem; background-color: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></span>
-            </div>
-            <p style="font-size: 0.65rem; color: #78716c; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.25rem 0;">Simulated Live Portfolio Balance</p>
-            <div class="counter-text">$<span id="portfolioCounter">300,000.00</span></div>
-            
-            <div style="border-top: 1px solid #1c1917; padding-top: 1rem; font-size: 0.75rem;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <span style="color: #a8a29e;">Infrastructure:</span>
-                    <span style="color: #ffd700; font-weight: 900; text-transform: uppercase; font-size: 0.65rem;">Online & Compounding</span>
-                </div>
-                <div style="display: flex; justify-content: space-between;">
-                    <span style="color: #a8a29e;">Total Pool Output:</span>
-                    <span style="color: #e7e5e4; font-weight: bold;" id="payoutCounter">6.42510 BTC</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <button class="btn btn-gold" onclick="showWallets()">Invest Now</button>
 
-    <!-- Investment Account Strategy Tiers -->
-    <section id="plans" class="grid-3" style="margin-bottom: 4rem; margin-top: 4rem;">
-        
-        <!-- Bronze Plan -->
-        <div class="card">
-            <div>
-                <h3 style="font-size: 0.85rem; font-weight: 700; color: #a8a29e; text-transform: uppercase; margin: 0;">Bronze Plan</h3>
-                <p style="font-size: 2.25rem; font-weight: 900; color: #ffd700; margin: 1rem 0;">2.5% <span style="font-size: 0.75rem; color: #78716c; font-weight: normal; text-transform: uppercase;">Daily</span></p>
-                <div style="border-top: 1px solid #1c1917; padding-top: 1rem; font-size: 0.75rem; color: #a8a29e; line-height: 2;">
-                    <div>✔ Min Allocation: $100</div>
-                    <div>✔ Max Allocation: $999</div>
-                    <div>✔ Standard Pipeline Priority</div>
-                </div>
-            </div>
-            <a href="#deposit" onclick="selectPlan('Bronze Tier Strategy')" class="btn-luxury btn-secondary" style="margin-top: 2rem;">Select Bronze</a>
-        </div>
-        
-        <!-- Silver Plan -->
-        <div class="card">
-            <div>
-                <h3 style="font-size: 0.85rem; font-weight: 700; color: #a8a29e; text-transform: uppercase; margin: 0;">Silver Premium</h3>
-                <p style="font-size: 2.25rem; font-weight: 900; color: #ffd700; margin: 1rem 0;">5.0% <span style="font-size: 0.75rem; color: #78716c; font-weight: normal; text-transform: uppercase;">Daily</span></p>
-                <div style="border-top: 1px solid #1c1917; padding-top: 1rem; font-size: 0.75rem; color: #a8a29e; line-height: 2;">
-                    <div>✔ Min Allocation: $1,000</div>
-                    <div>✔ Max Allocation: $4,999</div>
-                    <div>✔ High Network Bandwidth Pool</div>
-                </div>
-            </div>
+    <div id="walletBox">Wallet: Not Connected</div>
+</header>
+
+<!-- OPTION C: WALLET DISPLAY SYSTEM -->
+<div id="walletPanel" class="wallet-panel">
+
+    <h3 class="text-gold">Deposit Wallets</h3>
+
+    <div class="wallet-item">
+        <b>Bitcoin (BTC)</b>
+        <div>bc1qmuwthlp0rngyn8qe5svhhwdta0p0fadkjclvnp</div>
+        <button class="copy-btn" onclick="copyText('bc1qmuwthlp0rngyn8qe5svhhwdta0p0fadkjclvnp')">Copy</button>
+    </div>
+
+    <div class="wallet-item">
+        <b>Ethereum (ETH)</b>
+        <div>0x1f676189a8756fcD18E2772a90952F71E5895A91</div>
+        <button class="copy-btn" onclick="copyText('0x1f676189a8756fcD18E2772a90952F71E5895A91')">Copy</button>
+    </div>
+
+    <div class="wallet-item">
+        <b>USDT</b>
+        <div>0x1f676189a8756fcD18E2772a90952F71E5895A91</div>
+        <button class="copy-btn" onclick="copyText('0x1f676189a8756fcD18E2772a90952F71E5895A91')">Copy</button>
+    </div>
+
+</div>
+
+<!-- OPTION A/B DEMO PLANS -->
+<section class="grid">
+
+    <div class="card">
+        <h3 class="text-gold">Bronze</h3>
+        <p>2.5% Daily</p>
+        <p>$100 - $999</p>
+    </div>
+
+    <div class="card">
+        <h3 class="text-gold">Silver</h3>
+        <p>5% Daily</p>
+        <p>$1,000 - $4,999</p>
+    </div>
+
+    <div class="card">
+        <h3 class="text-gold">Gold</h3>
+        <p>7.5% Daily</p>
+        <p>$5,000 - $9,999</p>
+    </div>
+
+    <div class="card">
+        <h3 class="text-gold">Platinum</h3>
+        <p>10% Daily</p>
+        <p>$10,000 - $24,999</p>
+    </div>
+
+    <div class="card">
+        <h3 class="text-gold">Diamond</h3>
+        <p>12.5% Daily</p>
+        <p>$25,000+</p>
+    </div>
+
+</section>
+
+<script>
+let walletAddress = "";
+
+async function connectWallet() {
+    if (window.ethereum) {
+        try {
+            const accounts = await window.ethereum.request({
+                method: "eth_requestAccounts"
+            });
+
+            walletAddress = accounts[0];
+
+            document.getElementById("walletBox").innerText =
+                "Wallet: " + walletAddress;
+
+        } catch (err) {
+            alert("Wallet connection failed");
+        }
+    } else {
+        alert("Install MetaMask");
+    }
+}
+
+/* OPTION C */
+function showWallets() {
+    document.getElementById("walletPanel").style.display = "block";
+}
+
+/* COPY FUNCTION */
+function copyText(text) {
+    navigator.clipboard.writeText(text);
+    alert("Copied: " + text);
+}
+</script>
+
+</body>
+</html>
